@@ -1,0 +1,86 @@
+.skills {
+    padding: 120px 10px 120px 10px;
+    &__title {
+        position: relative;
+        text-align: center;
+        @include before_circle;
+        &:before {
+            top: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__subtitle {
+        text-align: center;
+    }
+    &__wrapper {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        grid-template-rows: repeat(2, minmax(270px, auto));
+        gap: 13px;
+    }
+    &__item {
+        border: 1px black solid;
+        padding: 30px;
+        display: grid;
+        align-content: space-between;
+        &-descr {
+            font-size: 12px;
+            line-height: 18px;
+            min-height: 94px;
+        }
+        &-icon {
+            img {
+                height: 45px;
+            }
+        }
+    }
+    &__progress {
+        position: relative;
+        padding-top: 120px;
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(2, 70px);
+        grid-auto-rows: 70px;
+        column-gap: 45px;
+        row-gap: 30px;
+        &-name {
+            display: flex;
+            justify-content: space-between;
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                width: 36px;
+                height: 36px;
+                border-radius: 100%;
+                background: $main-color;
+            }
+        }
+        &-count {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            margin-top: 7px;
+        }
+        &-title {
+            margin-left: 13px;
+            line-height: 21px;
+            margin-top: 7px;
+            
+        }
+        &-scale-grey {
+            height: 14px;
+            background: #E8E4DE;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        &-scale-orange {
+            height: 14px;
+            background: $main-color;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+    }
+}
